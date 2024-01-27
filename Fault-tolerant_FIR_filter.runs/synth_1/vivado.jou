@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Jan 27 14:39:02 2024
+# Process ID: 52034
+# Current directory: /home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.runs/synth_1
+# Command line: vivado -log FIR_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIR_filter.tcl
+# Log file: /home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.runs/synth_1/FIR_filter.vds
+# Journal file: /home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source FIR_filter.tcl -notrace
