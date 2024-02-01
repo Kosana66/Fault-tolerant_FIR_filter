@@ -29,7 +29,7 @@ architecture Behavioral of tb is
 begin
 
     uut_fir_filter:
-    entity work.fir_param(behavioral)
+    entity work.FIR_filter
     generic map(fir_ord=>fir_ord,
                 input_data_width=>in_out_data_width,
                 output_data_width=>in_out_data_width)
