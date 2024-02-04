@@ -1,7 +1,7 @@
-Running: xsim.dir/ThresholdVoter_tb_behav/xsimk -simmode gui -wdb ThresholdVoter_tb_behav.wdb -simrunnum 0 -socket 33587
+Running: xsim.dir/ThresholdVoter_tb_behav/xsimk -simmode gui -wdb ThresholdVoter_tb_behav.wdb -simrunnum 0 -socket 35361
 Design successfully loaded
-Design Loading Memory Usage: 33564 KB (Peak: 33564 KB)
-Design Loading CPU Usage: 20 ms
+Design Loading Memory Usage: 33580 KB (Peak: 33700 KB)
+Design Loading CPU Usage: 40 ms
 Simulation completed
-Simulation Memory Usage: 123500 KB (Peak: 172832 KB)
-Simulation CPU Usage: 611260 ms
+Simulation Memory Usage: 123516 KB (Peak: 172848 KB)
+Simulation CPU Usage: 50 ms

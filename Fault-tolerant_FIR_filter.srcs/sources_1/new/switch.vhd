@@ -11,7 +11,11 @@ entity switch is
            init : in STD_LOGIC;
            switch_out : out STD_LOGIC_VECTOR (input_data_width-1 downto 0);
            module_is_fault: out STD_LOGIC;
-           clk: in STD_LOGIC);
+           clk: in STD_LOGIC
+           );
+           
+    attribute dont_touch : string;
+    attribute dont_touch of switch : entity is "yes";
 end switch;
 
 architecture Behavioral of switch is
@@ -30,7 +34,8 @@ sr_ff: entity work.sr_ff
     port map( S => init,
               R => comp_output,
               Q => sr_output,
-             clk => clk);
+              clk => clk
+             );
               
 mux: entity work.mux
         generic map (input_data_width => input_data_width)
@@ -38,7 +43,7 @@ mux: entity work.mux
                    sel => sr_output,
                    data_out => switch_out);
 
-process (sr_output)
+process (sr_output) 
 begin
     if(sr_output = '0') then
         module_is_fault <= '1';

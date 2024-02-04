@@ -16,7 +16,8 @@ uut: entity work.sr_ff
     S => S,
     R => R,
     Q => Q,
-    clk => clk);
+    clk => clk
+   );
 
 clock : process
 begin

@@ -22,8 +22,8 @@ dut: entity work.switch
               init => init,
               switch_out => switch_out,
               module_is_fault => module_is_fault,
-              clk => clk);
-              
+              clk => clk
+              );
 clock: process
     begin
     clk <= '1';
@@ -45,22 +45,17 @@ stim: process
     module_output <= "00000";
     wait for 20ns;
     
-    init <= '0';
     voter_output <= "10101";
     module_output <= "10101";
     wait for 20ns;
     
-    init <= '0';
-    voter_output <= "10101";
     module_output <= "11111";
     wait for 20ns;
 
-    init <= '0';
     voter_output <= "00000";
     module_output <= "00000";
     wait for 20ns;
     
-    init <= '0';
     voter_output <= "10001";
     module_output <= "10101";
     wait for 20ns;

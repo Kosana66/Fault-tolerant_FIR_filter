@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="top_tb" />
+            <top_module name="txt_util" />
+            <top_module name="util_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="625166fs"></ZoomStartTime>
+      <ZoomEndTime time="870967fs"></ZoomEndTime>
+      <Cursor1Time time="870000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="181"></NameColumnWidth>
+      <ValueColumnWidth column_width="87"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="41" />
+   <wvobject type="logic" fp_name="/top_tb/init">
+      <obj_property name="ElementShortName">init</obj_property>
+      <obj_property name="ObjectShortName">init</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/data_i">
+      <obj_property name="ElementShortName">data_i[23:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider21" type="divider">
+      <obj_property name="label">IZLAZNI SIGNAL SISTEMA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_output">
+      <obj_property name="ElementShortName">top_output[23:0]</obj_property>
+      <obj_property name="ObjectShortName">top_output[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider22" type="divider">
+      <obj_property name="label">IZLAZI MODULA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/module_output[4]">
+      <obj_property name="ElementShortName">[4][23:0]</obj_property>
+      <obj_property name="ObjectShortName">[4][23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/module_output[3]">
+      <obj_property name="ElementShortName">[3][23:0]</obj_property>
+      <obj_property name="ObjectShortName">[3][23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/module_output[2]">
+      <obj_property name="ElementShortName">[2][23:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/module_output[1]">
+      <obj_property name="ElementShortName">[1][23:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/module_output[0]">
+      <obj_property name="ElementShortName">[0][23:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider23" type="divider">
+      <obj_property name="label">IZLAZI PREKIDACA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/switch_out">
+      <obj_property name="ElementShortName">switch_out[119:0]</obj_property>
+      <obj_property name="ObjectShortName">switch_out[119:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider24" type="divider">
+      <obj_property name="label">DA LI SU MODULI U KVARU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/voter/threshold">
+      <obj_property name="ElementShortName">threshold[1:0]</obj_property>
+      <obj_property name="ObjectShortName">threshold[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/module_is_fault">
+      <obj_property name="ElementShortName">module_is_fault[4:0]</obj_property>
+      <obj_property name="ObjectShortName">module_is_fault[4:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider145" type="divider">
+      <obj_property name="label">NULTI PREKIDAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(0)\/switches/comp_output">
+      <obj_property name="ElementShortName">comp_output</obj_property>
+      <obj_property name="ObjectShortName">comp_output</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(0)\/switches/sr_output">
+      <obj_property name="ElementShortName">sr_output</obj_property>
+      <obj_property name="ObjectShortName">sr_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider142" type="divider">
+      <obj_property name="label">TRECI PREKIDAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(3)\/switches/comp_output">
+      <obj_property name="ElementShortName">comp_output</obj_property>
+      <obj_property name="ObjectShortName">comp_output</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(3)\/switches/sr_output">
+      <obj_property name="ElementShortName">sr_output</obj_property>
+      <obj_property name="ObjectShortName">sr_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider144" type="divider">
+      <obj_property name="label">PRVI PREKIDAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(1)\/switches/comp_output">
+      <obj_property name="ElementShortName">comp_output</obj_property>
+      <obj_property name="ObjectShortName">comp_output</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(1)\/switches/sr_output">
+      <obj_property name="ElementShortName">sr_output</obj_property>
+      <obj_property name="ObjectShortName">sr_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider143" type="divider">
+      <obj_property name="label">DRUGI PREKIDAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(2)\/switches/comp_output">
+      <obj_property name="ElementShortName">comp_output</obj_property>
+      <obj_property name="ObjectShortName">comp_output</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(2)\/switches/sr_output">
+      <obj_property name="ElementShortName">sr_output</obj_property>
+      <obj_property name="ObjectShortName">sr_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider141" type="divider">
+      <obj_property name="label">CETVRTI PREKIDAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(4)\/switches/comp_output">
+      <obj_property name="ElementShortName">comp_output</obj_property>
+      <obj_property name="ObjectShortName">comp_output</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/\switches_instances(4)\/switches/sr_output">
+      <obj_property name="ElementShortName">sr_output</obj_property>
+      <obj_property name="ObjectShortName">sr_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider25" type="divider">
+      <obj_property name="label">signali vezani za FIR filtere</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/coef_addr_i">
+      <obj_property name="ElementShortName">coef_addr_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">coef_addr_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/coef_i">
+      <obj_property name="ElementShortName">coef_i[23:0]</obj_property>
+      <obj_property name="ObjectShortName">coef_i[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/we_i">
+      <obj_property name="ElementShortName">we_i</obj_property>
+      <obj_property name="ObjectShortName">we_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/start_check">
+      <obj_property name="ElementShortName">start_check</obj_property>
+      <obj_property name="ObjectShortName">start_check</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_tb/fir_ord">
+      <obj_property name="ElementShortName">fir_ord</obj_property>
+      <obj_property name="ObjectShortName">fir_ord</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_tb/input_data_width">
+      <obj_property name="ElementShortName">input_data_width</obj_property>
+      <obj_property name="ObjectShortName">input_data_width</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_tb/output_data_width">
+      <obj_property name="ElementShortName">output_data_width</obj_property>
+      <obj_property name="ObjectShortName">output_data_width</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_tb/n_param">
+      <obj_property name="ElementShortName">n_param</obj_property>
+      <obj_property name="ObjectShortName">n_param</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_tb/period">
+      <obj_property name="ElementShortName">period</obj_property>
+      <obj_property name="ObjectShortName">period</obj_property>
+   </wvobject>
+</wave_config>

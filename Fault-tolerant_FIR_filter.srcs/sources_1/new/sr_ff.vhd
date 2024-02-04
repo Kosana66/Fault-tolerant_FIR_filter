@@ -6,28 +6,29 @@ entity sr_ff is
            R : in    STD_LOGIC;
            clk : in  STD_LOGIC;
            Q : out STD_LOGIC);
+           
+    attribute dont_touch : string;
+    attribute dont_touch of sr_ff : entity is "yes";
 end sr_ff;
 
 architecture Behavioral of sr_ff is
 begin
 
-process (clk) 
+process (S, R, clk) 
     variable tmp: std_logic;
     begin
-    if(clk='1' and clk'event) then
-        if(S='0' and R='0')then
-        tmp:=tmp;
-        elsif(S='1' and R='1')then
-        tmp:='Z';
+    if(rising_edge(clk)) then
+        if(S='1' and R='0')then
+        tmp := '1';
         elsif(S='0' and R='1')then
-        tmp:='0';
+        tmp := '0';
+        elsif(S='1' and R='1')then
+        tmp := 'Z';
         else
-        tmp:='1';
+        tmp := tmp;
         end if;
     end if;
     Q <= tmp;
 end process;
+
 end Behavioral;
-
-
-

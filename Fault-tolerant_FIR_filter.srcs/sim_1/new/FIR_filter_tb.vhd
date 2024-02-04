@@ -1,23 +1,22 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_unsigned.all;
 use IEEE.NUMERIC_STD.ALL;
 use std.textio.all;
 use work.txt_util.all;
 use work.util_pkg.all;
 
-entity tb is
+entity FIR_filter_tb is
     generic(in_out_data_width : natural := 24;
             fir_ord : natural := 20);
 --  Port ( );
-end tb;
+end FIR_filter_tb;
 
-architecture Behavioral of tb is
+architecture Behavioral of FIR_filter_tb is
     constant period : time := 20 ns;
     signal clk_i_s : std_logic;
-    file input_test_vector : text open read_mode is "D:\predavanja\DS\fir_param\input.txt";
-    file output_check_vector : text open read_mode is "D:\predavanja\DS\fir_param\expected.txt";
-    file input_coef : text open read_mode is "D:\predavanja\DS\fir_param\coef.txt";
+    file input_test_vector : text open read_mode is "/home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/input.txt";
+    file output_check_vector : text open read_mode is "/home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/expected.txt";
+    file input_coef : text open read_mode is "/home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/coef.txt";
     signal data_i_s : std_logic_vector(in_out_data_width-1 downto 0);
     signal data_o_s : std_logic_vector(in_out_data_width-1 downto 0);
     signal coef_addr_i_s : std_logic_vector(log2c(fir_ord)-1 downto 0);
