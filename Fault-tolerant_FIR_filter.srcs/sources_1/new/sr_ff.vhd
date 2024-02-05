@@ -14,7 +14,7 @@ end sr_ff;
 architecture Behavioral of sr_ff is
 begin
 
-process (S, R, clk) 
+process (clk) 
     variable tmp: std_logic;
     begin
     if(rising_edge(clk)) then

@@ -1,0 +1,109 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Sun Feb  4 01:22:57 2024
+| Host         : Kosana running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7k70t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    31 |
+|    Minimum number of control sets                        |    31 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     6 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    31 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    31 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             130 |           40 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             720 |          198 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  Clock Signal  |                     Enable Signal                     | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | redudant_filters_instances[2].redudant_filters/b_s[5] |                  |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[1].redudant_filters/b_s[5] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[1].redudant_filters/b_s[4] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[1].redudant_filters/b_s[3] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[1].redudant_filters/b_s[2] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[1].redudant_filters/b_s[1] |                  |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG | redudant_filters_instances[1].redudant_filters/b_s[0] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[0].redudant_filters/b_s[5] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[0].redudant_filters/b_s[4] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[0].redudant_filters/b_s[2] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[0].redudant_filters/b_s[1] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[0].redudant_filters/b_s[3] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[0].redudant_filters/b_s[0] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[2].redudant_filters/b_s[4] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[2].redudant_filters/b_s[3] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[2].redudant_filters/b_s[2] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[2].redudant_filters/b_s[1] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[2].redudant_filters/b_s[0] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[4].redudant_filters/b_s[2] |                  |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG | redudant_filters_instances[3].redudant_filters/b_s[5] |                  |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[3].redudant_filters/b_s[4] |                  |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[3].redudant_filters/b_s[3] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[3].redudant_filters/b_s[2] |                  |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | redudant_filters_instances[3].redudant_filters/b_s[1] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[3].redudant_filters/b_s[0] |                  |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG | redudant_filters_instances[4].redudant_filters/b_s[5] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[4].redudant_filters/b_s[4] |                  |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[4].redudant_filters/b_s[3] |                  |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[4].redudant_filters/b_s[1] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | redudant_filters_instances[4].redudant_filters/b_s[0] |                  |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG |                                                       |                  |               40 |            130 |         3.25 |
++----------------+-------------------------------------------------------+------------------+------------------+----------------+--------------+
+
+

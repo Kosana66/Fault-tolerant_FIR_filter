@@ -7,7 +7,7 @@ entity FIR_filter is
     generic(fir_ord : natural := 5;
             input_data_width : natural := 18;
             output_data_width : natural := 18);
-    Port ( clk_i : in STD_LOGIC;
+    Port ( clk : in STD_LOGIC;
            we_i : in STD_LOGIC;
            coef_addr_i : std_logic_vector(log2c(fir_ord+1)-1 downto 0);
            coef_i : in STD_LOGIC_VECTOR (input_data_width-1 downto 0);
@@ -26,9 +26,9 @@ architecture Behavioral of FIR_filter is
                                                            
 begin
 
-    process(clk_i)
+    process(clk)
     begin
-        if(clk_i'event and clk_i = '1')then
+        if(rising_edge(clk))then
             if we_i = '1' then
                 b_s(to_integer(unsigned(coef_addr_i))) <= coef_i;
             end if;
@@ -38,7 +38,7 @@ begin
     first_section:
     entity work.MAC_module
     generic map(input_data_width=>input_data_width)
-    port map(clk_i=>clk_i,
+    port map(clk=>clk,
              u_i=>data_i,
              b_i=>b_s(fir_ord),
              sec_i=>(others=>'0'),
@@ -49,16 +49,16 @@ begin
         fir_section:
         entity work.MAC_module
         generic map(input_data_width=>input_data_width)
-        port map(clk_i=>clk_i,
+        port map(clk=>clk,
                  u_i=>data_i,
                  b_i=>b_s(fir_ord-i),
                  sec_i=>mac_inter(i-1),
                  sec_o=>mac_inter(i));
     end generate;
     
-    process(clk_i)
+    process(clk)
     begin
-        if(clk_i'event and clk_i='1')then
+        if(rising_edge(clk))then
             data_o <= mac_inter(fir_ord)(2*input_data_width-2 downto 2*input_data_width-output_data_width-1);
         end if;
     end process;

@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity MAC_module is
     generic (input_data_width : natural :=24);
-    Port ( clk_i : in std_logic;
+    Port ( clk : in std_logic;
            u_i : in STD_LOGIC_VECTOR (input_data_width-1 downto 0);
            b_i : in STD_LOGIC_VECTOR (input_data_width-1 downto 0);
            sec_i : in STD_LOGIC_VECTOR (2*input_data_width-1 downto 0);
@@ -21,9 +21,9 @@ architecture Behavioral of MAC_module is
 
     signal reg_s : STD_LOGIC_VECTOR (2*input_data_width-1 downto 0):=(others=>'0');
 begin
-    process(clk_i)
+    process(clk)
     begin
-        if (clk_i'event and clk_i = '1')then
+        if (rising_edge(clk))then
             reg_s <= sec_i;
         end if;
     end process;

@@ -13,7 +13,7 @@ end FIR_filter_tb;
 
 architecture Behavioral of FIR_filter_tb is
     constant period : time := 20 ns;
-    signal clk_i_s : std_logic;
+    signal clk : std_logic;
     file input_test_vector : text open read_mode is "/home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/input.txt";
     file output_check_vector : text open read_mode is "/home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/expected.txt";
     file input_coef : text open read_mode is "/home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/coef.txt";
@@ -32,7 +32,7 @@ begin
     generic map(fir_ord=>fir_ord,
                 input_data_width=>in_out_data_width,
                 output_data_width=>in_out_data_width)
-    port map(clk_i=>clk_i_s,
+    port map(clk=>clk,
              we_i=>we_i_s,
              coef_i=>coef_i_s,
              coef_addr_i=>coef_addr_i_s,
@@ -42,9 +42,9 @@ begin
     clk_process:
     process
     begin
-        clk_i_s <= '0';
+        clk <= '0';
         wait for period/2;
-        clk_i_s <= '1';
+        clk <= '1';
         wait for period/2;
     end process;
     
@@ -54,19 +54,19 @@ begin
     begin
         --upis koeficijenata
         data_i_s <= (others=>'0');
-        wait until falling_edge(clk_i_s);
+        wait until falling_edge(clk);
         for i in 0 to fir_ord loop
             we_i_s <= '1';
             coef_addr_i_s <= std_logic_vector(to_unsigned(i,log2c(fir_ord)));
             readline(input_coef,tv);
             coef_i_s <= to_std_logic_vector(string(tv));
-            wait until falling_edge(clk_i_s);
+            wait until falling_edge(clk);
         end loop;
         --ulaz za filtriranje
         while not endfile(input_test_vector) loop
             readline(input_test_vector,tv);
             data_i_s <= to_std_logic_vector(string(tv));
-            wait until falling_edge(clk_i_s);
+            wait until falling_edge(clk);
             start_check <= '1';
         end loop;
         start_check <= '0';
@@ -80,7 +80,7 @@ begin
     begin
         wait until start_check = '1';
         while(true)loop
-            wait until rising_edge(clk_i_s);
+            wait until rising_edge(clk);
             readline(output_check_vector,check_v);
             tmp := to_std_logic_vector(string(check_v));
             if(abs(signed(tmp) - signed(data_o_s)) > "000000000000000000000111")then

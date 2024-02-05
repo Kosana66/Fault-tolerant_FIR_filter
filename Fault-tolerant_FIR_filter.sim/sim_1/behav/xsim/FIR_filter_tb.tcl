@@ -8,4 +8,7 @@ if { [string length $curr_wave] == 0 } {
   }
 }
 
-run 1000ns
+run 0ns
+
+source -notrace {../../../../Fault-tolerant_FIR_filter.srcs/sim_1/new/force_signals.tcl}
+
