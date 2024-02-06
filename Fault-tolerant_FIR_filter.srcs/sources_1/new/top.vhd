@@ -4,10 +4,10 @@ use work.util_pkg.all;
 
 
 entity top is
-    Generic(fir_ord : natural := 20;
-        input_data_width : natural := 24;
-        output_data_width : natural := 24;
-        n_param : natural := 5;
+    Generic(fir_ord : natural := 4;
+        input_data_width : natural := 18;
+        output_data_width : natural := 18;
+        n_param : natural := 4;
         num_of_samples : natural := 4096);
     Port ( clk : in STD_LOGIC;
            rst      : in std_logic;

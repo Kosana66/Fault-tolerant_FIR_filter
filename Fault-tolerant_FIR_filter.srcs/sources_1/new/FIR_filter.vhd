@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 use work.util_pkg.all;
 
 entity FIR_filter is
-    generic(fir_ord : natural := 5;
+    generic(fir_ord : natural := 4;
             input_data_width : natural := 18;
             output_data_width : natural := 18);
     Port ( clk : in STD_LOGIC;
