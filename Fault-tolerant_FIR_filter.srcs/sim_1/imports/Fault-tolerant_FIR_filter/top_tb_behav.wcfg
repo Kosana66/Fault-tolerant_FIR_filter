@@ -12,30 +12,62 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="82382369fs"></ZoomStartTime>
-      <ZoomEndTime time="83073370fs"></ZoomEndTime>
-      <Cursor1Time time="82832369fs"></Cursor1Time>
+      <ZoomStartTime time="246052280fs"></ZoomStartTime>
+      <ZoomEndTime time="246202481fs"></ZoomEndTime>
+      <Cursor1Time time="171740337fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="170"></NameColumnWidth>
+      <NameColumnWidth column_width="110"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="56" />
-   <wvobject type="logic" fp_name="/top_tb/init">
-      <obj_property name="ElementShortName">init</obj_property>
-      <obj_property name="ObjectShortName">init</obj_property>
-   </wvobject>
+   <WVObjectSize size="69" />
    <wvobject type="logic" fp_name="/top_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="divider21" type="divider">
-      <obj_property name="label">IZLAZNI SIGNAL SISTEMA</obj_property>
+   <wvobject fp_name="divider3013" type="divider">
+      <obj_property name="label">input BRAM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/top_tb/top_output">
-      <obj_property name="ElementShortName">top_output[23:0]</obj_property>
-      <obj_property name="ObjectShortName">top_output[23:0]</obj_property>
+   <wvobject type="logic" fp_name="/top_tb/ena">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/enb">
+      <obj_property name="ElementShortName">enb</obj_property>
+      <obj_property name="ObjectShortName">enb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/wea">
+      <obj_property name="ElementShortName">wea</obj_property>
+      <obj_property name="ObjectShortName">wea</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/dia">
+      <obj_property name="ElementShortName">dia[23:0]</obj_property>
+      <obj_property name="ObjectShortName">dia[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/addra">
+      <obj_property name="ElementShortName">addra[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/START">
+      <obj_property name="ElementShortName">START</obj_property>
+      <obj_property name="ObjectShortName">START</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/addrb_in">
+      <obj_property name="ElementShortName">addrb_in[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_in[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/data_i">
+      <obj_property name="ElementShortName">data_i[23:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/input_logic/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/reg_s">
+      <obj_property name="ElementShortName">reg_s</obj_property>
+      <obj_property name="ObjectShortName">reg_s</obj_property>
    </wvobject>
    <wvobject fp_name="divider22" type="divider">
       <obj_property name="label">IZLAZI MODULA</obj_property>
@@ -89,6 +121,14 @@
       <obj_property name="ElementShortName">module_is_fault[6:0]</obj_property>
       <obj_property name="ObjectShortName">module_is_fault[6:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider21" type="divider">
+      <obj_property name="label">IZLAZNI SIGNAL SISTEMA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/init">
+      <obj_property name="ElementShortName">init</obj_property>
+      <obj_property name="ObjectShortName">init</obj_property>
    </wvobject>
    <wvobject fp_name="divider145" type="divider">
       <obj_property name="label">NULTI PREKIDAC</obj_property>
@@ -174,9 +214,13 @@
       <obj_property name="ElementShortName">sr_output</obj_property>
       <obj_property name="ObjectShortName">sr_output</obj_property>
    </wvobject>
-   <wvobject fp_name="divider25" type="divider">
-      <obj_property name="label">signali vezani za FIR filtere</obj_property>
+   <wvobject fp_name="divider3015" type="divider">
+      <obj_property name="label">FIR filtar</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/we_i">
+      <obj_property name="ElementShortName">we_i</obj_property>
+      <obj_property name="ObjectShortName">we_i</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/coef_addr_i">
       <obj_property name="ElementShortName">coef_addr_i[4:0]</obj_property>
@@ -186,9 +230,57 @@
       <obj_property name="ElementShortName">coef_i[23:0]</obj_property>
       <obj_property name="ObjectShortName">coef_i[23:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="divider329" type="divider">
+      <obj_property name="label">upis output BRAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/output_logic/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/BRAM_output/ena">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/BRAM_output/wea">
+      <obj_property name="ElementShortName">wea</obj_property>
+      <obj_property name="ObjectShortName">wea</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM_output/addra">
+      <obj_property name="ElementShortName">addra[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM_output/dia">
+      <obj_property name="ElementShortName">dia[23:0]</obj_property>
+      <obj_property name="ObjectShortName">dia[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider840" type="divider">
+      <obj_property name="label">citanje output BRAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/BRAM_output/enb">
+      <obj_property name="ElementShortName">enb</obj_property>
+      <obj_property name="ObjectShortName">enb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM_output/addrb">
+      <obj_property name="ElementShortName">addrb[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[11:0]</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/top_tb/start_check">
       <obj_property name="ElementShortName">start_check</obj_property>
       <obj_property name="ObjectShortName">start_check</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM_output/dob">
+      <obj_property name="ElementShortName">dob[23:0]</obj_property>
+      <obj_property name="ObjectShortName">dob[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider25" type="divider">
+      <obj_property name="label">signali vezani za FIR filtere</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_tb/period">
+      <obj_property name="ElementShortName">period</obj_property>
+      <obj_property name="ObjectShortName">period</obj_property>
    </wvobject>
    <wvobject type="other" fp_name="/top_tb/fir_ord">
       <obj_property name="ElementShortName">fir_ord</obj_property>
@@ -205,45 +297,5 @@
    <wvobject type="other" fp_name="/top_tb/n_param">
       <obj_property name="ElementShortName">n_param</obj_property>
       <obj_property name="ObjectShortName">n_param</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/top_tb/period">
-      <obj_property name="ElementShortName">period</obj_property>
-      <obj_property name="ObjectShortName">period</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/BRAM/ena">
-      <obj_property name="ElementShortName">ena</obj_property>
-      <obj_property name="ObjectShortName">ena</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/BRAM/enb">
-      <obj_property name="ElementShortName">enb</obj_property>
-      <obj_property name="ObjectShortName">enb</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/top_tb/redudant_system_instances/BRAM/wea">
-      <obj_property name="ElementShortName">wea</obj_property>
-      <obj_property name="ObjectShortName">wea</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM/addra">
-      <obj_property name="ElementShortName">addra[11:0]</obj_property>
-      <obj_property name="ObjectShortName">addra[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM/addrb">
-      <obj_property name="ElementShortName">addrb[11:0]</obj_property>
-      <obj_property name="ObjectShortName">addrb[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM/dia">
-      <obj_property name="ElementShortName">dia[23:0]</obj_property>
-      <obj_property name="ObjectShortName">dia[23:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM/dob">
-      <obj_property name="ElementShortName">dob[23:0]</obj_property>
-      <obj_property name="ObjectShortName">dob[23:0]</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/top_tb/redudant_system_instances/BRAM/input_data_width">
-      <obj_property name="ElementShortName">input_data_width</obj_property>
-      <obj_property name="ObjectShortName">input_data_width</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/top_tb/redudant_system_instances/BRAM/num_of_samples">
-      <obj_property name="ElementShortName">num_of_samples</obj_property>
-      <obj_property name="ObjectShortName">num_of_samples</obj_property>
    </wvobject>
 </wave_config>

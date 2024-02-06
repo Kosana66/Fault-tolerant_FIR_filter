@@ -12,23 +12,42 @@ entity sr_ff is
 end sr_ff;
 
 architecture Behavioral of sr_ff is
+--signal tmp:std_logic;
 begin
 
-process (clk) 
-    variable tmp: std_logic;
-    begin
-    if(rising_edge(clk)) then
-        if(S='1' and R='0')then
-        tmp := '1';
-        elsif(S='0' and R='1')then
-        tmp := '0';
-        elsif(S='1' and R='1')then
-        tmp := 'Z';
-        else
-        tmp := tmp;
-        end if;
-    end if;
-    Q <= tmp;
-end process;
+--process (clk) 
+--    --variable tmp: std_logic;
+--    begin
+--    if(rising_edge(clk)) then
+--        if(S='1' and R='0')then
+--        tmp <= '1';
+--        elsif(S='0' and R='1')then
+--        tmp <= '0';
+--        elsif(S='1' and R='1')then
+--        tmp <= 'Z';
+--        else
+--        tmp <= tmp;
+--        end if;
+--    end if;
+--   -- Q <= tmp;
+--end process;
 
+--Q<=tmp;
+
+
+process(clk) is
+begin
+
+    if(rising_edge(clk)) then
+    
+        if(S='1') then
+            Q<='1';
+        else
+            if(R='1') then
+                Q<='0';
+            end if;
+        end if;
+    
+    end if;    
+end process ;
 end Behavioral;
