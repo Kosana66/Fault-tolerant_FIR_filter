@@ -10,6 +10,7 @@ entity top is
         n_param : natural := 5;
         num_of_samples : natural := 4096);
     Port ( clk : in STD_LOGIC;
+           rst      : in std_logic;
            we_i : std_logic;
            coef_addr_i : std_logic_vector(log2c(fir_ord+1)-1 downto 0);
            coef_i : in STD_LOGIC_VECTOR (input_data_width-1 downto 0);
@@ -40,7 +41,7 @@ signal top_output: std_logic_vector(output_data_width-1 downto 0);
 signal data_i: std_logic_vector(input_data_width-1 downto 0) := (others => '0');
 signal addrb_in : std_logic_vector(log2c(num_of_samples)-1 downto 0);
 signal addra_out : std_logic_vector(log2c(num_of_samples)-1 downto 0);
-signal reg_s : std_logic := '0';
+signal reg_s : std_logic_vector(3 downto 0) := (others => '0');
 signal valid : std_logic;
 signal wea_out : std_logic;
 signal ena_out : std_logic;
@@ -73,6 +74,7 @@ redudant_filters: entity work.FIR_filter
                 input_data_width  => input_data_width,
                 output_data_width  =>  output_data_width)
     port map(clk => clk,
+             rst => rst, 
              we_i => we_i,
              coef_i => coef_i,
              coef_addr_i => coef_addr_i,
@@ -101,16 +103,23 @@ voter: entity work.ThresholdVoter
     
     process(clk)
     begin
-        if (rising_edge(clk))then
-            for i in 2 downto 1 loop
-                reg_s <= valid;
-            end loop;
+        if (rising_edge(clk)) then
+            if(rst = '1') then
+                for i in 3 downto 0 loop  
+                    reg_s(i) <= '0';
+                end loop;
+            else
+                for i in 3 downto 1 loop  
+                    reg_s(i) <= reg_s(i-1);
+                end loop;
+                reg_s(0) <= valid;
+            end if;
         end if;
     end process;
     
 output_logic: entity work.output_logic_unit
     Generic map( num_of_samples  => num_of_samples)
-    Port map( valid => reg_s,
+    Port map( valid => reg_s(3),
            clk => clk,
            wea => wea_out,
            ena => ena_out,

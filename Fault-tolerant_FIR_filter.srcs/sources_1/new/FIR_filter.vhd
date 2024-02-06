@@ -8,6 +8,7 @@ entity FIR_filter is
             input_data_width : natural := 18;
             output_data_width : natural := 18);
     Port ( clk : in STD_LOGIC;
+           rst : in std_logic;
            we_i : in STD_LOGIC;
            coef_addr_i : std_logic_vector(log2c(fir_ord+1)-1 downto 0);
            coef_i : in STD_LOGIC_VECTOR (input_data_width-1 downto 0);
@@ -39,6 +40,7 @@ begin
     entity work.MAC_module
     generic map(input_data_width=>input_data_width)
     port map(clk=>clk,
+             rst => rst, 
              u_i=>data_i,
              b_i=>b_s(fir_ord),
              sec_i=>(others=>'0'),
@@ -50,6 +52,7 @@ begin
         entity work.MAC_module
         generic map(input_data_width=>input_data_width)
         port map(clk=>clk,
+                 rst => rst, 
                  u_i=>data_i,
                  b_i=>b_s(fir_ord-i),
                  sec_i=>mac_inter(i-1),

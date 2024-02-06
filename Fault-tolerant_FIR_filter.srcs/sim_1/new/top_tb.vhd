@@ -18,6 +18,7 @@ architecture Behavioral of top_tb is
 constant period : time := 20 ns;
 
 signal  clk : STD_LOGIC;
+signal rst : std_logic;
 signal coef_addr_i : std_logic_vector(log2c(fir_ord+1)-1 downto 0);
 signal coef_i : STD_LOGIC_VECTOR (input_data_width-1 downto 0);
 signal init : STD_LOGIC;
@@ -46,6 +47,7 @@ begin
             output_data_width => output_data_width,
             n_param => n_param)
         Port map(clk => clk,
+               rst => rst,
                we_i => we_i,
                coef_addr_i => coef_addr_i,
                coef_i => coef_i,
@@ -84,7 +86,7 @@ begin
         coef_i <= (others => '0');
         wait until falling_edge(clk);
         
-        --upis u BRAM
+        --upis u ulazni BRAM
         pos_in_BRAM := 0;
         ena <= '1';
         wea <= '1';
@@ -109,6 +111,8 @@ begin
             wait until falling_edge(clk);
         end loop;
         
+        -- pocetak obrade u filtru
+        -- paralelan upis u izlazni BRAM
         START <= '1';
         init <= '0';
         enb <= '1';
@@ -116,6 +120,11 @@ begin
             wait until falling_edge(clk);
         end loop; 
         
+        wait until falling_edge(clk);
+        wait until falling_edge(clk);
+        wait until falling_edge(clk);
+        
+        -- citanje iz izlaznog BRAM-a
         for i in 0 to pos_in_BRAM-1 loop   
             addrb <= std_logic_vector(to_unsigned(i,log2c(num_of_samples)));
             wait until falling_edge(clk);
@@ -128,6 +137,7 @@ begin
         report "verification done!" severity failure;
     end process;
     
+    -- provera da li su podaci na izlazu validni
     check_process:
     process
         variable check_v : line;
