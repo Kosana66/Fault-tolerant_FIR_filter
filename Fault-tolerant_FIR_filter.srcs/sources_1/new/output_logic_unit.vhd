@@ -16,7 +16,7 @@ end output_logic_unit;
 
 architecture Behavioral of output_logic_unit is
 signal cnt: std_logic_vector(log2c(num_of_samples)-1 downto 0) := (others => '0');
-signal tmp : std_logic;
+
 begin
 
 process(clk) is
@@ -27,25 +27,30 @@ begin
                 wea <= '1';
                 ena <= '1';
                 enb <= '0';
-                tmp <= '1';
                 cnt <= std_logic_vector(unsigned(cnt) + to_unsigned(1, log2c(num_of_samples)));
             else
                 wea <= '0';
                 ena <= '0';
                 enb <= '1';
-                tmp <= '1';
             end if;
         else
             wea <= '0';
             ena <= '0';
             enb <= '1';
-            tmp <= '0';
             cnt <= (others => '0');
         end if;
     end if;
 end process;
 
-READY <= tmp;
+process(valid) is
+begin
+        if(falling_edge (valid)) then
+           READY <= '1';
+        else
+           READY <= '0';
+        end if;
+end process;
+
 addra <= cnt;
 
 

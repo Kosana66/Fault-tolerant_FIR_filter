@@ -4,4 +4,27 @@ Running: /home/kosana/XILINX/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 2f07
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.txt_util
+Compiling package xil_defaultlib.util_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.MAC_module [mac_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.FIR_filter [\FIR_filter(fir_ord=20,input_dat...]
+Compiling architecture behavioral of entity xil_defaultlib.comparator [comparator_default]
+Compiling architecture behavioral of entity xil_defaultlib.sr_ff [sr_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux [mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.switch [switch_default]
+Compiling architecture bihevioral of entity xil_defaultlib.BRAM [bram_default]
+Compiling architecture behavioral of entity xil_defaultlib.logic_unit [logic_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.ThresholdVoter [\ThresholdVoter(n_param=7)\]
+Compiling architecture behavioral of entity xil_defaultlib.output_logic_unit [output_logic_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.top [\top(fir_ord=20,input_data_width...]
+Compiling architecture behavioral of entity xil_defaultlib.top_tb
+Built simulation snapshot top_tb_behav

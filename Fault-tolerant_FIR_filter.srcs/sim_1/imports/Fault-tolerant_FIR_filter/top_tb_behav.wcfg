@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="82901200fs"></ZoomStartTime>
-      <ZoomEndTime time="83074001fs"></ZoomEndTime>
-      <Cursor1Time time="82955000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="246260001fs"></ZoomEndTime>
+      <Cursor1Time time="82955fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="182"></NameColumnWidth>
-      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="68" />
+   <WVObjectSize size="69" />
    <wvobject type="logic" fp_name="/top_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -131,6 +131,10 @@
    <wvobject type="array" fp_name="/top_tb/redudant_system_instances/BRAM_output/dob">
       <obj_property name="ElementShortName">dob[23:0]</obj_property>
       <obj_property name="ObjectShortName">dob[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/READY">
+      <obj_property name="ElementShortName">READY</obj_property>
+      <obj_property name="ObjectShortName">READY</obj_property>
    </wvobject>
    <wvobject fp_name="divider25" type="divider">
       <obj_property name="label">signali vezani za FIR filtere</obj_property>
