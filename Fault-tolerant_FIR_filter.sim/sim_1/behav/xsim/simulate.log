@@ -1,0 +1,5 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Failure: verification done!
+Time: 246260 ns  Iteration: 1  Process: /top_tb/stim_process  File: /home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/top_tb.vhd
+$finish called at time : 246260 ns : File "/home/kosana/Desktop/DSONG/Fault-tolerant_FIR_filter/Fault-tolerant_FIR_filter.srcs/sim_1/new/top_tb.vhd" Line 137
